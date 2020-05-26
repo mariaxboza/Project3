@@ -4,14 +4,14 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Overseer
-{
+{ // Class to create the seating chart
     List l = new List();
     Window w = new Window();
     String[] options = {"Remove", "Add", "Move", "Exit"};
     String[] yN = {"Yes", "No"};
     int click = 0;
     public Overseer()
-    {
+    { // Constuctor for the seating chart
         int i = w.option(yN, "Do you have a list of names to add?");
         if(i == 0)
             l.oldList();
@@ -64,7 +64,7 @@ public class Overseer
     }
 
     public String ToString()
-    {
+    { // Method to override the to string method to create the list in the JOptionPane
         String sResult = "";
         for(int r = 0; r < 5; r++)
         {
